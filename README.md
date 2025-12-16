@@ -45,3 +45,26 @@ replicaset.apps/rabbitmq-cluster-operator-848b8f777d   1         1         1    
 
 A new CRD (Custom Resource Definition) has been created for us and using this we can extend kubernetes API to create our own RabbitMQ cluster as a custom resource in kubernetes.
 
+
+In the next step we will apply the CR on our cluster using the following file:
+
+```
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+	name: rabbitmq
+```
+
+Command:
+
+```
+kubectl apply -f the_above_file.yaml
+```
+
+
+
+
+
+
+
+
