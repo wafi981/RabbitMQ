@@ -48,11 +48,21 @@ A new CRD (Custom Resource Definition) has been created for us and using this we
 
 In the next step we will apply the CR on our cluster using the following file:
 
+
+But before create a namespace rabbitmq:
+
+```
+kubectl cretae ns rabbitmq
+```
+
+Then you can proceed applying this file on your cluster
+
 ```
 apiVersion: rabbitmq.com/v1beta1
 kind: RabbitmqCluster
 metadata:
 	name: rabbitmq
+    namespace: rabbitmq
 ```
 
 Command:
